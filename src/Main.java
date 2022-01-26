@@ -6,13 +6,15 @@ import java.awt.*;
 public  class Main  {
     void getInterface(java.util.List<PcapIf> allDevices) {
         JFrame frame = new JFrame();
-        frame.setTitle("Network Packet Sniffer");
+        frame.setTitle("NETWORK PACKET SNIFFER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 550);
+        //frame.getContentPane().add(new JPanelWithBackground("packet.png "));
         frame.setLayout(new
 
                 BorderLayout());
-        frame.setBackground(Color.decode("#F5F5F5"));
+       // frame.setBackground(Color.decode("#F5F5F5"));
+        frame.setBackground(Color.cyan);
         frame.setVisible(true);
         JLabel label1 = new JLabel();
         label1.setText("Choose your interface");
@@ -20,7 +22,7 @@ public  class Main  {
         label1.setVerticalAlignment(JLabel.TOP);
         label1.setFont(new
 
-                Font("MV Bali", Font.BOLD, 25));
+                Font("MV Bali", Font.ITALIC, 25));
         JLabel label2 = new JLabel();
         label2.setText("@Copyrights Network Packet Sniffer");
         label2.setHorizontalAlignment(JLabel.LEFT);
@@ -29,12 +31,12 @@ public  class Main  {
 
                 Font("MV Bali", Font.PLAIN, 18));
         JLabel label3 = new JLabel("Capture the network traffic");
-
+        label3.setForeground(Color.red);
         label3.setHorizontalAlignment(JLabel.LEFT);
         label3.setVerticalAlignment(JLabel.TOP);
         label3.setFont(new
 
-                Font("MV Bali", Font.PLAIN, 20));
+                Font("MV Bali", Font.BOLD, 20));
         JPanel panel1 = new JPanel();
         panel1.setPreferredSize(new
 
@@ -50,10 +52,14 @@ public  class Main  {
         panel3.setPreferredSize(new
 
                 Dimension(300, 140));
-        panel4.setBackground(Color.decode("#121212"));
+       /* panel4.setBackground(Color.decode("#121212"));
         panel3.setBackground(Color.decode("#F5F5F5"));
         panel1.setBackground(Color.decode("#F05454"));
-        panel2.setBackground(Color.decode("#F05454"));
+        panel2.setBackground(Color.decode("#F05454"));*/
+        panel1.setBackground(Color.pink);
+        panel2.setBackground(Color.gray);
+//        panel3.setBackground(Color.CYAN);
+        panel4.setBackground(Color.gray);
         panel2.setPreferredSize(new
 
                 Dimension(10, 50));
@@ -68,8 +74,12 @@ public  class Main  {
             JButton button = new JButton(description);
             button.setBounds(50, 100, 95, 30);
             button.setBorder(new RoundedBorder(10));
-            button.setBackground(Color.decode("#F05454"));
+            button.setBackground(Color.black);
+
+            button.setForeground(Color.pink);
+            /*button.setBackground(Color.decode("#F05454"));
             button.setForeground(Color.decode("#FFFFFF"));
+            */
             button.setBorder(BorderFactory.createEmptyBorder(0, 0, 5, 0));
             panel2.add(button);
             button.setFocusable(false);

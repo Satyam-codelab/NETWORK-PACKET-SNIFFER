@@ -66,8 +66,8 @@ public class Packet extends Thread{
                         packet.scan(id);
                         textArea.append("\n"+new Date(packet.getCaptureHeader().timestampInMillis()));
                         if (packet.hasHeader(eth)) {
-                            textArea.append(("\nMAC : "+FormatUtils.mac(eth.source())+"\n"));
-                            textArea.append(("\nMAC DESTINATION: "+FormatUtils.mac(eth.destination())+"\n"));
+                            textArea.append(("\nMAC DESTINATION: "+FormatUtils.mac(eth.source())+"\n"));
+                            textArea.append(("\nMAC : "+FormatUtils.mac(eth.destination())+"\n"));
                         }
                         if (packet.hasHeader(ip4)) {
                             textArea.append(("\nIP4 : "+FormatUtils.ip(ip4.source())+"\n"));
